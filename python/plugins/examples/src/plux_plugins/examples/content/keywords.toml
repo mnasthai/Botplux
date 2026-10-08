@@ -1,0 +1,6 @@
+# Versioned keyword rules for KeywordPlugin. Edit, publish a new version in the
+# manifest, and restart: an already published version is immutable.
+[rules]
+"帮助" = "发送 /help 查看全部命令"
+"营业时间" = "工作日 10:00–19:00，节假日休息"
+"地址" = "示例路 1 号 3 楼"

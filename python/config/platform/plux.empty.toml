@@ -1,0 +1,7 @@
+# Starts the framework with no business plugins or native connection.
+[paths]
+runtime_root = "../../../runtime"
+[runtime]
+poll_seconds = 0.2
+stop_timeout_seconds = 10
+batch_size = 100

@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plux-framework"
+version = "0.1.0"
+description = "Local message, data and plugin runtime for IRIS"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+plux = "plux.runtime.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["plux", "plux.*"]

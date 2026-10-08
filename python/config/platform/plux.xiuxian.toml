@@ -1,0 +1,26 @@
+# Replace the example internal IDs before connecting IRIS.
+[paths]
+runtime_root = "../../../runtime/xiuxian"
+[observer]
+enabled = false
+send_enabled = false
+media_send_enabled = false
+[policy]
+account = "wxid_example"
+allowed_targets = ["example@chatroom"]
+# The game commands also mention opponents; genuine mentions are parsed by the plugin.
+group_requires_mention = false
+allow_unknown_history = true
+[runtime]
+poll_seconds = 0.2
+stop_timeout_seconds = 10
+batch_size = 100
+[[plugins]]
+entrypoint = "plux_plugins.xiuxian:XiuxianPlugin"
+[plugins.config]
+account = "wxid_example"
+groups = ["example@chatroom"]
+admin_ids = []
+[plugins.config.rules]
+duel_enabled = true
+visual_cards_enabled = false

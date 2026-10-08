@@ -1,0 +1,44 @@
+# Load every bundled example plugin. Sending stays off until IRIS is connected.
+[paths]
+runtime_root = "../../../runtime/examples"
+
+[observer]
+enabled = false
+send_enabled = false
+media_send_enabled = false
+quote_enabled = false
+
+[policy]
+# Fill in the real internal IDs, then set observer.enabled/send_enabled to true.
+account = ""
+allowed_targets = []
+allowed_actors = []
+group_requires_mention = true
+# Schema 2 cannot prove that an observed message is live. Enable this to run
+# commands for content appended while the runtime is up.
+allow_unknown_history = true
+
+[runtime]
+poll_seconds = 0.2
+stop_timeout_seconds = 10
+batch_size = 100
+
+[[plugins]]
+entrypoint = "plux_plugins.examples:HelpPlugin"
+[[plugins]]
+entrypoint = "plux_plugins.examples:CalculatorPlugin"
+[[plugins]]
+entrypoint = "plux_plugins.examples:CounterPlugin"
+config = { maximum = 1000000 }
+[[plugins]]
+entrypoint = "plux_plugins.examples.echo:EchoPlugin"
+[[plugins]]
+entrypoint = "plux_plugins.examples.keywords:KeywordPlugin"
+[[plugins]]
+entrypoint = "plux_plugins.examples.poll:PollPlugin"
+[[plugins]]
+entrypoint = "plux_plugins.examples.poster:PosterPlugin"
+[[plugins]]
+entrypoint = "plux_plugins.examples.digest:DigestPlugin"
+# The target must also appear in policy.allowed_targets before it can be sent.
+config = { conversation = "example@chatroom", limit = 50, window_seconds = 3600 }

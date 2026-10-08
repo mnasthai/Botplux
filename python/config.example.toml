@@ -1,0 +1,6 @@
+log_path = '../runtime/observer-4.1.13.12.jsonl'
+database_path = '../runtime/messages.sqlite3'
+# Optional. Leave empty to preserve unknown account-relative direction.
+self_id = ''
+poll_interval = 0.5
+max_line_bytes = 1048576

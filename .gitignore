@@ -1,0 +1,28 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# --- Plux 运行时数据（数据库、日志、媒体、锁；由运行产生，不入库）---
+runtime/
+*.runtime.lock
+*.sender.lock
+
+# --- 日志与临时文件 ---
+*.log
+*.tmp
+
+# --- 编辑器 / IDE ---
+.idea/
+.vscode/
+*.swp
+
+# --- 操作系统 ---
+Thumbs.db
+desktop.ini
+.DS_Store
