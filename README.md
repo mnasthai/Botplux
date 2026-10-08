@@ -260,9 +260,6 @@ plugins/                   旧 wechat_receiver 版实现，仅作参考，Plux �
 | [Botplux](https://github.com/mnasthai/Botplux) | 本插件运行的 Python 运行时：消息、事务、任务与插件契约 |
 | [IRIS](https://github.com/mnasthai/IRIS) | 注入微信进程内的 C++ 后端 |
 
-> [!TIP]
-> 只做数据处理与任务调度、不需要收发消息时，可以把 `observer.enabled` 保持为 `false`，整套框架依然可用。
-
 ---
 
 ## 📜 开源协议
