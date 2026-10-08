@@ -22,6 +22,9 @@ runtime/
 .vscode/
 *.swp
 
+# --- 本地存档：重写前的设计文档保留在磁盘上，永不提交 ---
+docs/history/
+
 # --- 操作系统 ---
 Thumbs.db
 desktop.ini
