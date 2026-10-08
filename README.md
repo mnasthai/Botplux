@@ -91,15 +91,12 @@ flowchart LR
 | 项目 | 要求 |
 | :--- | :--- |
 | 操作系统 | Windows x64（发送通道使用本地命名管道） |
-| Python | **>= 3.11**，且**不依赖任何第三方包** |
+| Python | **>= 3.11**|
 | 原生后端 | IRIS，目标版本 **仅 4.1.13.12**（版本不符会被框架主动拒绝） |
-| 收发前提 | C++ 后端已构建并注入微信；只用数据与任务能力时不需要 |
+| 收发前提 | C++ 后端已构建并注入微信 |
 
 > [!WARNING]
 > 本仓库的验证停在「离线测试全绿 + 与 C++ 测试宿主联调通过」，**没有**注入真实微信、没有跑通真实收发。Hook 行为、真实送达与媒体格式兼容性都仍未实证。
-
-> [!IMPORTANT]
-> `accepted` 只表示原生后端接受了本次提交，**不等于收件人已收到**；`unknown` 表示结果不确定，框架不会自动重发。重复消息的代价被判断为高于漏发。
 
 ---
 
@@ -123,8 +120,6 @@ python -m pip install -e python\plugins\examples
 plux --config python\config\platform\plux.example.toml check
 ```
 
-`check` 只读取配置、加载插件类、校验声明与资源路径，**不会创建数据库、不会连接原生管道**。输出会列出实际加载的插件：
-
 ```json
 { "valid": true, "plugins": ["help", "calculator", "counter", "echo",
   "keywords", "poll", "poster", "digest"] }
@@ -140,7 +135,7 @@ plux --config python\config\platform\plux.example.toml run --once
 { "ingested": 0, "processed": 0, "task_worked": false, "delivery": "idle" }
 ```
 
-到这里框架已经在运行了：读日志、跑插件、推进任务队列。示例配置默认 **关闭原生连接与发送**，不会碰微信。
+到这里框架已经在运行了：读日志、跑插件、推进任务队列。示例配置默认 **关闭原生连接与发送** 功能。
 
 ### 第 4 步：接上 IRIS（可选）
 
