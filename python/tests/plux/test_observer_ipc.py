@@ -17,7 +17,7 @@ from plux.adapters.wechat_observer.transport import TransportError
 
 
 HOST = Path(os.environ.get("WECHATBOT_TEST_PIPE_HOST",
-            "E:/wechatbot/refactored/build/observer-cpp/Release/bin/ObserverReaderTests.exe"))
+            r"<C++ 仓库>\build\observer-cmake\Release\bin\ObserverReaderTests.exe"))
 
 
 @unittest.skipUnless(os.name == "nt" and HOST.is_file(), "ordinary C++ test host unavailable")
