@@ -255,7 +255,10 @@ plugins/                   旧 wechat_receiver 版实现，仅作参考，Plux �
 
 ## 🔗 相关项目
 
-Plux 依赖 **IRIS 原生后端**（C++，注入微信进程内）提供真正的收信与发信；Plux 只处理协议之外的编排、状态与业务接入。两者之间的边界由 [原生协议规范](docs/specs/native-protocol-spec.md) 固定，C++ 侧的文档在它自己的仓库里。
+| 项目 | 关系 |
+| :--- | :--- |
+| [Botplux](https://github.com/mnasthai/Botplux) | 本插件运行的 Python 运行时：消息、事务、任务与插件契约 |
+| [IRIS](https://github.com/mnasthai/IRIS) | 注入微信进程内的 C++ 后端 |
 
 > [!TIP]
 > 只做数据处理与任务调度、不需要收发消息时，可以把 `observer.enabled` 保持为 `false`，整套框架依然可用。
