@@ -38,7 +38,7 @@ class GreetingPlugin(Plugin):
 entrypoint = "mybot.greeting:GreetingPlugin"
 ```
 
-一个插件必须实现四个内容：类级 `manifest`、继承 `Plugin`、`register()`、配置里的 `module:Class` 入口。框架不扫描目录，也没有导入副作用注册和热重载。
+一个插件必须实现四个内容：类级 `manifest`、继承 `Plugin`、`register()`、配置里的 `module:Class` 入口 才能被正确启用。
 
 `manifest` 的字段：
 
