@@ -224,7 +224,7 @@ plux --config <你的配置> env
 | 🔌 **[原生协议规范](docs/specs/native-protocol-spec.md)** | 帧格式、命令字段、事件日志、错误码全表、媒体契约 |
 | 🧪 **[构建与开发](docs/development/building.md)** | 安装、测试、跨语言联调、仓库现状与已知缺陷 |
 
-📚 全部文档的入口在 **[文档中心](docs/README.md)**；重写前的设计文档存档在 [docs/history](docs/history/README.md)。
+📚 全部文档的入口在 **[文档中心](docs/README.md)**。
 
 ---
 
@@ -232,7 +232,7 @@ plux --config <你的配置> env
 
 ```
 README.md                  本文件
-docs/                      全部技术文档（history/ 为重写前存档）
+docs/                      技术文档：指南 · 规范 · 内部实现 · 排查 · 构建
 python/
 ├── pyproject.toml         分发名 plux-framework
 ├── src/plux/              框架源码

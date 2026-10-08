@@ -134,7 +134,7 @@ app.stop()
 
 ```
 README.md                     入口
-docs/                         文档（history/ 是重写前的存档）
+docs/                         文档：指南 · 规范 · 内部实现 · 排查 · 构建
 python/                       框架与示例插件
 plugins/                      旧 wechat_receiver 插件源码，仅作参考
 ```
@@ -144,10 +144,10 @@ plugins/                      旧 wechat_receiver 插件源码，仅作参考
 | 路径 | 说明 |
 | --- | --- |
 | `plugins/*.py` | 旧实现，导入的是 `wechat_receiver`，Plux 不会加载 |
-| `python/tests/__pycache__/*.pyc` | 旧测试套件的缓存，源码已不在 |
+| `python/tests/test_*.py`（顶层 63 个，`tests/plux/` 之外） | 旧实现的测试；其中 61 个导入 `wechat_receiver` / `wechat_controller`，这两个包不在本仓库，因此无法运行 |
 | `python/config.example.toml` | 旧实现的配置格式，与当前 TOML 规范完全不同 |
 | `python/config/platform/plux.xiuxian.toml` | 业务包 `plux_plugins.xiuxian` 不在本仓库，仅作接入示例 |
-| `python/src/plux_framework.egg-info/` | 安装残留，可安全删除 |
+| `python/src/plux_framework.egg-info/` | 安装残留，已被 `.gitignore` 排除 |
 
 ---
 

@@ -36,7 +36,6 @@
 | 💡 [**内部实现**](architecture-internals.md) | 事务边界、消费与恢复、任务状态机、资产流水线、已知取舍 |
 | 🔌 [原生协议规范](specs/native-protocol-spec.md) | 帧格式、命令字段、事件日志、错误码全表、媒体契约 |
 | 🧪 [构建与开发](development/building.md) | 安装、测试、跨语言联调、仓库现状与已知缺陷 |
-| 🗄️ [历史文档](history/README.md) | 重写前的设计文档，仅作存档 |
 
 ---
 
@@ -100,7 +99,6 @@ docs/
 │   └── native-protocol-spec.md  管道帧、命令、事件、错误码
 ├── architecture-internals.md    框架内部实现
 ├── troubleshooting.md           排查手册
-├── development/
-│   └── building.md              构建、安装、测试
-└── history/                     重写前的设计文档（存档，不再维护）
+└── development/
+    └── building.md              构建、安装、测试
 ```
