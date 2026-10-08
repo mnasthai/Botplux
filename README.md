@@ -160,8 +160,8 @@ plux --config <你的配置> env
 
 | 命令 | 作用 |
 | :--- | :--- |
-| `plux --config <TOML> check` | 校验配置与插件声明，**不产生运行时 IO** |
-| `plux --config <TOML> run` | 启动受监督的运行时（`Ctrl+C` 优雅停机） |
+| `plux --config <TOML> check` | 校验配置与插件声明 |
+| `plux --config <TOML> run` | 启动受监督的运行时（`Ctrl+C`退出） |
 | `plux --config <TOML> run --once` | 只跑一轮调度循环 |
 | `plux --config <TOML> env` | 打印 IRIS 需要的环境变量 |
 | `plux --config <TOML> status` | 读取持久队列 / 处理器 / 任务状态 |
