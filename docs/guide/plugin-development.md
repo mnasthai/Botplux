@@ -76,15 +76,17 @@ tasks schedules messages history directory media delivery observer_v1
 两条硬性规则：
 
 1. **构造与 `register()` 阶段不能做业务 IO。** 这段时间服务被门禁包住，任何业务方法调用抛 `ConfigurationError`；只有 `domain`、`capabilities`、`config` 和 `repository_factory` 可用。把读文件、查数据库、发消息放到 `start()` 或 handler 里。
-2. **`start()` 失败则整个启动失败。** 适合做：读取并在内存里冻结内容、发布长期复用的资产、打开需要长期持有的资源。
+2. **`start()` 失败则整个启动失败。** 
 
-`stop()` 用于停止业务生产和释放资源。运行时的线程排空、超时与连接关闭由框架协调，插件不需要自己启常驻线程（也不允许）。
+`stop()` 用于停止业务生产和释放资源。
+
+运行时的线程排空、超时与连接关闭由框架协调，插件不需要自己启常驻线程（也不允许）。
 
 ---
 
-## 3. 四种登记
+## 3. 四种类型注册
 
-`register(registry)` 里只能声明，不能执行。四种登记的语义差别很大：
+`register(registry)` 里只能声明，不能执行，四种事件的语义差别很大：
 
 | 登记 | 触发 | 执行模式 | 冲突行为 |
 | --- | --- | --- | --- |
